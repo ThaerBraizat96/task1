@@ -6,6 +6,7 @@ import LoginProvider from './components/context'
 import Posts from './components/Posts';
 import Comments from './components/Comments';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Footer from './components/Footer';
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/posts"  element={<Posts />} />
           <Route path="/Comments" element={<Comments />} />
         </Routes >
+        <Footer />
         </LoginProvider >
       </Router > 
 

@@ -1,10 +1,6 @@
 import React, { useState, createContext } from 'react';
-// import axios from 'axios';
-
 
 export const LoginContext = createContext();
-
-
 
 export default function LoginProvider(props) {
 
