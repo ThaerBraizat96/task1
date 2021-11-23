@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import LogIn from './components/LogIn';
-import LoginProvider from './components/context'
-import Posts from './components/Posts';
-import Comments from './components/Comments';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from './components/Footer';
+import Header from './components/header/Header';
+import LogIn from './components/logIn/LogIn';
+import LoginProvider from './components/context/context'
+import Posts from './components/posts/Posts';
+import Comments from './components/comments/Comments';
+import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom";
+
 
 
 
@@ -14,22 +14,44 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
-      <Router >
-       
-        <LoginProvider >
-        <Header />
-        <Routes >
-          <Route path="/"  element={<LogIn />} />
-          <Route path="/posts"  element={<Posts />} />
-          <Route path="/Comments" element={<Comments />} />
-        </Routes >
-        <Footer />
-        </LoginProvider >
-      </Router > 
 
-    </ >
+      <Router >
+    <LoginProvider >
+        <Header />
+
+        <Switch >
+          <Route exact path="/" component={LogIn} />
+          <Route path="/posts" component={Posts } />
+          <Route path="/Comments" component={Comments} />
+        </Switch >
+        </LoginProvider >
+      </Router>
+    
   );
 }
 
 export default App;
+
+
+
+
+{/* <Router >
+       
+<LoginProvider >
+<Header />
+<Switch >
+  <Route path="/"  element={<LogIn />} />
+  <Route path="/posts"  element={<Posts />} />
+  <Route path="/Comments" element={<Comments />} />
+</Switch >
+</LoginProvider >
+</Router >  */}
+
+
+
+
+
+
+
+
+

@@ -9,6 +9,9 @@ export default function LoginProvider(props) {
     const [userData,setUserData]= useState({username:"" ,email:"" ,id:0 })
     const [postId,setPostId] = useState(0)
     const [loggedIn,setLoggedIn] = useState(false)
+    const [users, setUsers] = useState([]);
+    const [postsAllUser, setPostsAllUser] = useState([]);
+    const [userPosts, setUserPosts] = useState([]);
 
 
 
@@ -22,7 +25,16 @@ export default function LoginProvider(props) {
         postId:postId,
         setPostId:setPostId,
         loggedIn:loggedIn,
-        setLoggedIn:setLoggedIn
+        setLoggedIn:setLoggedIn,
+        users:users,
+        setUsers:setUsers,
+        postsAllUser:postsAllUser,
+        userPosts:userPosts,
+        setPostsAllUser:setPostsAllUser,
+        setUserPosts:setUserPosts
+
+
+        
 
     }
 
